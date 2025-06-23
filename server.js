@@ -28,9 +28,6 @@ mongoose.connect(process.env.MONGODB_URI, {
 .then(() => console.log('CONECTADO A MONGODB ATLAS'))
 .catch(err => console.error('ERROR DE CONEXIÓN:', err));
 //si la conexion es exitosa , muestra mensaje 
-.then(() => console.log('Conexión exitosa a MongoDB'))
-//si hay un error en la conexion, muestra mensaje
-.catch(err => console.error(err));
 
 //esquemas y modelos 
 
