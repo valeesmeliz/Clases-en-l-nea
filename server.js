@@ -8,8 +8,9 @@ const bcrypt = require('bcrypt'); //incriptar contraseñas
 
 //Crear una instancia de la app express 
 const app = express();
-//Definir el puerto donde se ejecutará el servidor
-const PORT =3000;
+//Definir el puerto donde se ejecutará el server
+const PORT = process.env.PORT || 3000; // USA EL PUERTO QUE ASIGNE RAILWAY O LOCAL 3000
+
 
 //habilitar cors para permitir peticiones
 app.use(cors());
@@ -19,12 +20,13 @@ app.use(bodyParser.json());
 //detectar archivos estaticos de la carpeta public
 app.use(express.static('public'));
 
-//conexion a mongoDB
-mongoose.connect('mongodb://localhost:27017/linea',{ 
-    useNewUrlParser: true, //usa el parser del url
-    useUnifiedTopology: true //motor de monitoreo 
+// CONEXIÓN A MONGODB ATLAS USANDO VARIABLE DE ENTORNO
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
-
+.then(() => console.log('CONECTADO A MONGODB ATLAS'))
+.catch(err => console.error('ERROR DE CONEXIÓN:', err));
 //si la conexion es exitosa , muestra mensaje 
 .then(() => console.log('Conexión exitosa a MongoDB'))
 //si hay un error en la conexion, muestra mensaje
