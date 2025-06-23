@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f9fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #e6f7ff;
+      border: 4px solid #33aaff;
+      border-radius: 20px;
+      padding: 30px;
+      width: 300px;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      background-color: #b3e0ff;
+      padding: 8px;
+      border-radius: 10px;
+    }
+
+    .input-group i {
+      margin-right: 10px;
+      color: #005580;
+    }
+
+    .input-group input {
+      border: none;
+      outline: none;
+      background: transparent;
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .login-button {
+      background-color: #33aaff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #3366cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="imagenlogo.png" alt="Logo">
+    <h2>BIENVENIDO</h2>
+
+    <div class="input-group">
+      
+      <input type="text" placeholder="Usuario">
+    </div>
+
+    <div class="input-group">
+      
+      <input type="password" placeholder="Contraseña">
+    </div>
+
+
+    <div class="login-button">
+      <a href="principal.html">Iniciar sesion</a>
+    </div>
+
+
+
+
+    <div class="register-link">
+      ¿No tienes cuenta? <a href="registrarse.html">Regístrate</a>
+    </div>
+  </div>
+</body>
+</html>
